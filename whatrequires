@@ -1,1 +1,11 @@
 # This file contains recursive sources that require this package
+R-AER
+R-Ecdat
+R-Ecfun
+R-betareg
+R-ipred
+R-mi
+R-partykit
+R-prodlim
+R-sem
+R-systemfit
