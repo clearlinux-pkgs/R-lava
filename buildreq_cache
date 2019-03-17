@@ -1,4 +1,7 @@
 1.6.5
 R-SQUAREM
+R-assertthat
+R-cli
 R-numDeriv
 R-rlang
+R-withr

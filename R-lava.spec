@@ -4,16 +4,21 @@
 #
 Name     : R-lava
 Version  : 1.6.5
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/lava_1.6.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lava_1.6.5.tar.gz
 Summary  : Latent Variable Models
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-SQUAREM
-Requires: R-numDeriv
+Requires: R-assertthat
+Requires: R-cli
+Requires: R-withr
 BuildRequires : R-SQUAREM
+BuildRequires : R-assertthat
+BuildRequires : R-cli
 BuildRequires : R-numDeriv
+BuildRequires : R-rlang
+BuildRequires : R-withr
 BuildRequires : buildreq-R
 
 %description
@@ -28,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549988473
+export SOURCE_DATE_EPOCH=1552853636
 
 %install
-export SOURCE_DATE_EPOCH=1549988473
+export SOURCE_DATE_EPOCH=1552853636
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -67,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library lava|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  lava || :
 
 
 %files
@@ -121,3 +125,13 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/lava/me1.png
 /usr/lib64/R/library/lava/mediation1.png
 /usr/lib64/R/library/lava/mediation2.png
+/usr/lib64/R/library/lava/tests/test-all.R
+/usr/lib64/R/library/lava/tests/testthat/test-constrain.R
+/usr/lib64/R/library/lava/tests/testthat/test-estimate_default.R
+/usr/lib64/R/library/lava/tests/testthat/test-graph.R
+/usr/lib64/R/library/lava/tests/testthat/test-inference.R
+/usr/lib64/R/library/lava/tests/testthat/test-misc.R
+/usr/lib64/R/library/lava/tests/testthat/test-model.R
+/usr/lib64/R/library/lava/tests/testthat/test-multigroup.R
+/usr/lib64/R/library/lava/tests/testthat/test-plot.R
+/usr/lib64/R/library/lava/tests/testthat/test-sim.R
