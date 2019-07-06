@@ -4,7 +4,7 @@
 #
 Name     : R-lava
 Version  : 1.6.5
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/lava_1.6.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lava_1.6.5.tar.gz
 Summary  : Latent Variable Models
