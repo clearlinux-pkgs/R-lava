@@ -4,7 +4,7 @@
 #
 Name     : R-lava
 Version  : 1.6.6
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/lava_1.6.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lava_1.6.6.tar.gz
 Summary  : Latent Variable Models
@@ -15,6 +15,7 @@ Requires: R-numDeriv
 BuildRequires : R-SQUAREM
 BuildRequires : R-numDeriv
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 with latent variables (MLE, 2SLS, and composite likelihood
@@ -28,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564764806
+export SOURCE_DATE_EPOCH=1571853175
 
 %install
-export SOURCE_DATE_EPOCH=1564764806
+export SOURCE_DATE_EPOCH=1571853175
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
