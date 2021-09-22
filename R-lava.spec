@@ -4,14 +4,16 @@
 #
 Name     : R-lava
 Version  : 1.6.10
-Release  : 47
+Release  : 48
 URL      : https://cran.r-project.org/src/contrib/lava_1.6.10.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lava_1.6.10.tar.gz
 Summary  : Latent Variable Models
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-SQUAREM
+Requires: R-future.apply
 Requires: R-numDeriv
+Requires: R-progressr
 BuildRequires : R-SQUAREM
 BuildRequires : R-future.apply
 BuildRequires : R-numDeriv
@@ -31,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631665798
+export SOURCE_DATE_EPOCH=1632276333
 
 %install
-export SOURCE_DATE_EPOCH=1631665798
+export SOURCE_DATE_EPOCH=1632276333
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
